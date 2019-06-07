@@ -30,5 +30,5 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
 endif()
 
 # Trivial example using gtest and gmock
-target_link_libraries(Labo4 gtest gmock_main)
+target_link_libraries(GEN-LAB05 gtest gmock_main)
 add_test(NAME example_test COMMAND example)
