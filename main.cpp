@@ -3,7 +3,6 @@
 #include "Customer.h"
 
 int main() {
-
     Customer customer("Olivier");
     customer.addRental( Rental( Movie("Karate Kid"), 7));
     customer.addRental( Rental( Movie( "Avengers: Endgame", Movie::NEW_RELEASE ), 5));
