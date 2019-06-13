@@ -1,10 +1,18 @@
-cmake_minimum_required(VERSION 3.13)
-project(GEN-LAB05)
+cmake_minimum_required(VERSION 3.14)
+project(GEN_LAB05)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(GEN-LAB05 main.cpp Customer.cpp Customer.h Movie.cpp Movie.h Rental.h)
+add_executable(Main
+        src/main.cpp
+        src/Customer.cpp src/Customer.h
+        src/Movie.cpp src/Movie.h
+        src/Rental.h)
 
+add_executable(Testing
+        src/Customer.cpp src/Customer.h
+        src/Movie.cpp src/Movie.h
+        src/Rental.h test/CustomerTest.cpp)
 
 include(DownloadProject.cmake)
 download_project(PROJ                googletest
@@ -12,7 +20,6 @@ download_project(PROJ                googletest
         GIT_TAG             master
         ${UPDATE_DISCONNECTED_IF_AVAILABLE}
         )
-
 
 # Prevent GoogleTest from overriding our compiler/linker options
 # when building with Visual Studio
@@ -29,6 +36,6 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
             "${gmock_SOURCE_DIR}/include")
 endif()
 
+
 # Trivial example using gtest and gmock
-target_link_libraries(GEN-LAB05 gtest gmock_main)
-add_test(NAME example_test COMMAND example)
+target_link_libraries(Testing gtest gmock gmock_main)
