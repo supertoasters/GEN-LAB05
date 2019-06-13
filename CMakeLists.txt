@@ -12,7 +12,7 @@ add_executable(Main
 add_executable(Testing
         src/Customer.cpp src/Customer.h
         src/Movie.cpp src/Movie.h
-        src/Rental.h)
+        src/Rental.h test/CustomerTest.cpp)
 
 include(DownloadProject.cmake)
 download_project(PROJ                googletest
