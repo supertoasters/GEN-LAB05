@@ -20,6 +20,8 @@ public:
 
     double calculateAmount(Rental rental);
 
+    int addFrequentRenterPoints(Rental rental);
+
 private:
     std::string _name;
     std::vector<Rental> _rentals;
