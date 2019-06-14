@@ -4,7 +4,7 @@
 
 class Price {
 public:
-    virtual int movieType() = 0;
+    virtual double movieType(unsigned int dayRented) = 0;
 
 };
 

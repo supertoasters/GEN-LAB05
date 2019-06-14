@@ -5,7 +5,7 @@
 
 class RegularMoviePrice : public Price {
 public:
-    int movieType();
+    double movieType(unsigned int dayRented);
 };
 
 

@@ -4,6 +4,6 @@
 
 #include "NewReleaseMoviePrice.h"
 
-int NewReleaseMoviePrice::movieType() {
-
+double NewReleaseMoviePrice::movieType(unsigned int dayRented) {
+    return  dayRented * 3;;
 }
