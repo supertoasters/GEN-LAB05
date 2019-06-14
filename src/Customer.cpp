@@ -2,6 +2,7 @@
 #include <sstream>
 #include <vector>
 #include "Customer.h"
+#include "price/Price.h"
 
 using std::ostringstream;
 using std::vector;
@@ -11,6 +12,8 @@ using namespace std;
 double Customer::calculateAmount(Rental rental) {
 
     double amount = 0;
+
+    Price moviePrice = new
 
     switch (rental.getMovie().getPriceCode()) {
         case Movie::REGULAR:

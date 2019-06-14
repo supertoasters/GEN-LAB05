@@ -5,8 +5,9 @@
 #ifndef GEN_LAB05_CHILDRENMOVIEPRICE_H
 #define GEN_LAB05_CHILDRENMOVIEPRICE_H
 
+#include "Price.h"
 
-class ChildrenMoviePrice {
+class ChildrenMoviePrice : public Price {
 public:
     int movieType();
 };
